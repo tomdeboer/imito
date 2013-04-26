@@ -1,9 +1,10 @@
-#Imito: *A no-nonsens presentation framework built for developers.*
+#Imito: *A no-nonsense presentation framework built for developers.*
  
 ---
 
 ### Goals
 - Imito should load and respond very fast.
+- Imito should be able to run locally and in places without wifi.
 - Imito should be as lightweight as possible.
 - Imito should be as extensible as possible.
 - Imito should not make decisions for the developer.
