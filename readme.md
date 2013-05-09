@@ -1,19 +1,19 @@
-#Imito: *A no-nonsense presentation framework built for developers.*
+#imito: *A no-nonsense presentation framework built for developers.*
  
 ---
 
 ### Goals
-- Imito should load and respond very fast.
-- Imito should be able to run locally and in places without wifi.
-- Imito should be as lightweight as possible.
-- Imito should be as extensible as possible.
-- Imito should not make decisions for the developer.
-- Imito should provide some basic styles and typography.
-- Imito should not get in your way!
-- Imito should leave the rest up to you =)
+- imito should load and respond very fast.
+- imito should be able to run locally and in places without wifi.
+- imito should be as lightweight as possible.
+- imito should be as extensible as possible.
+- imito should not make decisions for the developer.
+- imito should provide some basic styles and typography.
+- imito should not get in your way!
+- imito should leave the rest up to you =)
 
 ### Usage
-Here is how to use Imito. The rest is up to you.
+Here is how to use imito. The rest is up to you.
 
 **Basic slide layout:**
 
@@ -32,9 +32,9 @@ Here is how to use Imito. The rest is up to you.
 There are a number of background classes available: `blue`, `red`, `yellow`, `brown`, `orange`, `pink` and `black`. The example above uses `yellow`.
 
 ### Magic
-Magic is a dirty word in developer land. You simply want to know what's going on. That's why Imito does only this:
+Magic is a dirty word in developer land. You simply want to know what's going on. That's why imito does only this:
 
-- Imito will go from slide to slide with the arrow keys, spacebar and backspace. It does this using CSS3's transform property.
+- imito will go from slide to slide with the arrow keys, spacebar and backspace. It does this using CSS3's transform property.
 - Ehm.. Yeah, that's pretty much it.
 
 ### Todo
@@ -46,5 +46,5 @@ Some things still need to be done.
 - Suggestions?
 
 ### Contact
-If you're interesting in using or extending Imito, or you just want to get in touch, drop me an email at <tom@tomdeboer.nl>...
+If you're interesting in using or extending imito, or you just want to get in touch, drop me an email at <tom@tomdeboer.nl>...
 
