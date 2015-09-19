@@ -6,11 +6,10 @@ var Imito = (function () {
     function focus($el) {
         var index = $slides.indexOf($el);
 
-        $container.style.transform = "translate3d(" + ((index * -100) + '%') + ",0 , 0)";
+        $container.style.transform = "translate3d(" + ((index * -100) + '%') + ", 0, 0)";
         $active_slide = $el;
     }
     function next() {
-
         var $next = $slides[$slides.indexOf($active_slide) + 1] || $slides[0];
 
         focus($next);
@@ -48,5 +47,4 @@ var Imito = (function () {
 
         focus($slides[0]);
     });
-
 }());
