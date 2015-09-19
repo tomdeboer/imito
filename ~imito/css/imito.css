@@ -20,10 +20,10 @@ html, body {
 	-webkit-text-size-adjust: none;
 }
 
-
 p, h1,h2,h3,h4,h5,h6{ margin-bottom: 1em; }
 
 ul{ padding-left: 1em; }
+li{ padding: 0.2em 0; }
 
 
 #slides_container{
@@ -75,6 +75,14 @@ ul{ padding-left: 1em; }
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+.slide-step{
+	opacity: 0;
+	transition: all 0.3s cubic-bezier(.77, .10, .22, 1);
+}
+.slide-step.viewed{
+	opacity: 1;
 }
 
 .blue{

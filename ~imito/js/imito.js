@@ -1,21 +1,34 @@
 /*jslint  */
 var Imito = (function () {
 
-    var $container, $slides, $active_slide;
+    var $container, $slides, $steps, $active_slide;
 
     function focus($el) {
-        var index = $slides.indexOf($el);
+        var index = $steps.indexOf($el);
 
-        $container.style.transform = "translate3d(" + ((index * -100) + '%') + ", 0, 0)";
+        $steps.forEach(function ($step, i) {
+            if (i <= index) {
+                $step.classList.add('viewed');
+            } else {
+                $step.classList.remove('viewed');
+            }
+        });
+
+        var $lastViewedSlide = $slides.filter(function ($slide) { return $slide.classList.contains('viewed') ? $slide : undefined; }).pop();
+        console.log("lastViewedSlide:", $lastViewedSlide);
+        var slideIndex = $slides.indexOf($lastViewedSlide);
+        $container.style.transform = "translate3d(" + ((slideIndex * -100) + '%') + ", 0, 0)";
+
+
         $active_slide = $el;
     }
     function next() {
-        var $next = $slides[$slides.indexOf($active_slide) + 1] || $slides[0];
+        var $next = $steps[$steps.indexOf($active_slide) + 1] || $steps[0];
 
         focus($next);
     }
     function previous() {
-        var $next = $slides[$slides.indexOf($active_slide) - 1] || $slides[$slides.length - 1];
+        var $next = $steps[$steps.indexOf($active_slide) - 1] || $steps[$steps.length - 1];
 
         focus($next);
     }
@@ -42,6 +55,7 @@ var Imito = (function () {
     document.addEventListener('DOMContentLoaded', function () {
         $container  = document.getElementById('slides_container');
         $slides     = Array.prototype.slice.call($container.querySelectorAll('.slide'));
+        $steps      = Array.prototype.slice.call($container.querySelectorAll('.slide, .slide-step'));
 
         document.addEventListener('keydown', onKeyDown);
 
